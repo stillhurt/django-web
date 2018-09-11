@@ -25,7 +25,7 @@ SECRET_KEY = 'z_3h2z^pp^+5xg)$9#rm7+771x4=cqgr)!%jg=^kur3=rid5d9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'funweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'fun',
+        'USER' : 'root',
+        'PASSWORD' : '!@QW12qw',
+        'HOST' : 'localhost',
+        'PORT' : '3306'
     }
 }
 
